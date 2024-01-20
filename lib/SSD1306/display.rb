@@ -222,6 +222,16 @@ module SSD1306
       self.command contrast
     end
 
+    # Invert the display
+    def invert(invert)
+      # invert = true: display is inverted
+      # invert = false: display is normal
+      if invert
+        self.command SSD1306_INVERTDISPLAY
+      else
+        self.command SSD1306_NORMALDISPLAY
+      end
+    end
 
     protected
 
